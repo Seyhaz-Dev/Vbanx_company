@@ -1,0 +1,63 @@
+/*
+Theme Name: VBANX Theme
+Theme URI: https://vbanx.com
+Author: Theara Hai
+Author URI: https://vbanx.com
+Description: Custom WordPress theme for VBANX Digital Banking.
+Version: 1.0.0
+License: GPL v2 or later
+Text Domain: vbanx-theme
+*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.site-header {
+    background: #0b2a6f;
+    padding: 20px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0b2a6f, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: white;
+    color: #0b2a6f;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+}
