@@ -335,7 +335,7 @@ get_header();
         <h4>Quick Link</h4>
         <ul>
           <li><a href="#">Solution</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#">AboutUs</a></li>
           <li><a href="#">EcoSystem</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
