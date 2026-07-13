@@ -1,0 +1,118 @@
+/* ===========================
+   HEADER
+=========================== */
+
+.site-header{
+
+    width:100%;
+
+    background:#081B3A;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    padding:20px 0;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+.container{
+
+    max-width:1280px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+}
+
+/* Logo */
+
+.logo img{
+
+    height:42px;
+
+}
+
+/* Navigation */
+
+.nav-menu{
+
+    display:flex;
+
+    gap:36px;
+
+    list-style:none;
+
+}
+
+.nav-menu li{
+
+    list-style:none;
+    display:flex;
+
+}
+.nav-menu ul{
+
+    list-style:none;
+    display:flex;
+    gap:36px;
+
+}
+
+.nav-menu li a{
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:500;
+    display:flex;
+
+    transition:.3s;
+
+}
+
+.nav-menu li a:hover{
+
+    color:#2DD4BF;
+
+}
+
+/* CTA */
+
+.btn-demo{
+
+    background:#10B981;
+
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-demo:hover{
+
+    background:#059669;
+
+}

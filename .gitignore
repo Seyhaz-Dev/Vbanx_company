@@ -1,48 +1,37 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
-
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
-
-# Configuration
-wp-config.php
-
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
+# Environment
+wordpress/wp-config.php
+.env
 
 # Uploads
-/wp-content/uploads/
+wordpress/wp-content/uploads/
 
-# Log files
+# Cache
+wordpress/wp-content/cache/
+wordpress/wp-content/upgrade/
+
+# Debug logs
+wordpress/wp-content/debug.log
+debug.log
+
+# Dependencies
+node_modules/
+vendor/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
 *.log
 
-# htaccess
-/.htaccess
+# OS
+.DS_Store
+Thumbs.db
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# WordPress core - ignore everything except our theme
+wordpress/*
+!wordpress/wp-content/
+wordpress/wp-content/*
+!wordpress/wp-content/themes/
+wordpress/wp-content/themes/*
+!wordpress/wp-content/themes/vbanx-theme/
