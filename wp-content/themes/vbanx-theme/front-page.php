@@ -14,6 +14,25 @@
  *   /wp-content/themes/your-theme/assets/logo-1.svg (etc.)
  */
 
+  if ( $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['vbanx_contact_nonce']) && wp_verify_nonce($_POST['vbanx_contact_nonce'], 'vbanx_contact_form') ) {
+      $first_name = sanitize_text_field($_POST['first_name']);
+      $last_name  = sanitize_text_field($_POST['last_name']);
+      $email      = sanitize_email($_POST['email']);
+      $service    = sanitize_text_field($_POST['service']);
+      $message    = sanitize_textarea_field($_POST['message']);
+
+      $to      = 'info@vbanx.com';
+      $subject = "New Demo Request from $first_name $last_name";
+      $body    = "From: $first_name $last_name\nEmail: $email\nService: $service\n\nMessage:\n$message";
+      $headers = array('Content-Type: text/plain; charset=UTF-8', "Reply-To: $email");
+
+      wp_mail( $to, $subject, $body, $headers );
+
+      echo '<p style="color:green;">Thanks! We\'ll be in touch soon.</p>';
+  }
+
+
+
 $theme_uri = esc_url( get_template_directory_uri() );
 
 
@@ -661,7 +680,7 @@ $vbanx_partner_logos = array(
           <a href="#" aria-label="Gmail"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 5.5l9.5 7 9.5-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
-     <form class="contact-right" onsubmit="event.preventDefault();" method="post">
+     <form class="contact-right" method="post" action="">
         <?php wp_nonce_field( 'vbanx_contact_form', 'vbanx_contact_nonce' ); ?>
         <div class="form-row">
           <div class="form-field"><label>First Name</label><input type="text" name="first_name" placeholder="John"></div>
