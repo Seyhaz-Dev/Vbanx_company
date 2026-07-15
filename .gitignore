@@ -2,8 +2,7 @@
 wordpress/wp-config.php
 .env
 
-# Uploads
-wordpress/wp-content/uploads/
+
 
 # Cache
 wordpress/wp-content/cache/
